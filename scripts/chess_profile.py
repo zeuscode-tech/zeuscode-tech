@@ -23,20 +23,7 @@ BOARD_PATH = CHESS_DIR / "board.svg"
 START_MARKER = "<!-- CHESS:START -->"
 END_MARKER = "<!-- CHESS:END -->"
 COMMAND_PATTERN = re.compile(r"^chess\|(move|new)\|([^|]*)\|(\d+)$", re.IGNORECASE)
-PIECES = {
-    "P": "♙",
-    "N": "♘",
-    "B": "♗",
-    "R": "♖",
-    "Q": "♕",
-    "K": "♔",
-    "p": "♟",
-    "n": "♞",
-    "b": "♝",
-    "r": "♜",
-    "q": "♛",
-    "k": "♚",
-}
+POSITION_PATH = CHESS_DIR / "position.json"
 
 
 class ChessCommandError(ValueError):
@@ -158,20 +145,33 @@ def game_status(board: chess.Board) -> str:
     return f"Ход {side}{suffix}"
 
 
-def legal_moves_table(board: chess.Board, repository: str, revision: int) -> str:
-    grouped: dict[str, list[tuple[str, str]]] = {}
-    for move in sorted(board.legal_moves, key=lambda item: item.uci()):
-        from_square = chess.square_name(move.from_square).upper()
-        title = f"chess|move|{move.uci()}|{revision}"
-        grouped.setdefault(from_square, []).append((board.san(move), issue_url(repository, title)))
-
-    rows = ["| Фигура | Легальные ходы |", "|:--:|:--|"]
-    for square, moves in grouped.items():
-        piece = board.piece_at(chess.parse_square(square.lower()))
-        icon = PIECES.get(piece.symbol(), "") if piece else ""
-        links = " · ".join(f"[{san}]({url})" for san, url in moves)
-        rows.append(f"| {icon} **{square}** | {links} |")
-    return "\n".join(rows)
+def position_payload(state: dict, repository: str) -> dict:
+    board = chess.Board(state["fen"])
+    legal_moves = [
+        {
+            "from": chess.square_name(move.from_square),
+            "to": chess.square_name(move.to_square),
+            "uci": move.uci(),
+            "san": board.san(move),
+        }
+        for move in sorted(board.legal_moves, key=lambda item: item.uci())
+    ]
+    return {
+        "version": 1,
+        "repository": repository,
+        "gameId": state["game_id"],
+        "revision": len(state["moves"]),
+        "fen": state["fen"],
+        "turn": "white" if board.turn == chess.WHITE else "black",
+        "status": game_status(board),
+        "gameOver": board.is_game_over(),
+        "lastMove": state["moves"][-1]["uci"] if state["moves"] else None,
+        "pieces": {
+            chess.square_name(square): piece.symbol()
+            for square, piece in board.piece_map().items()
+        },
+        "legalMoves": legal_moves,
+    }
 
 
 def history_table(state: dict) -> str:
@@ -206,6 +206,10 @@ def render(state: dict, repository: str) -> None:
         },
     )
     BOARD_PATH.write_text(svg, encoding="utf-8")
+    POSITION_PATH.write_text(
+        json.dumps(position_payload(state, repository), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     revision = len(state["moves"])
     board_url = (
@@ -214,27 +218,18 @@ def render(state: dict, repository: str) -> None:
     lines = [
         START_MARKER,
         '<p align="center">',
-        f'  <img width="520" src="{board_url}" alt="Текущая шахматная позиция" />',
+        '  <a href="https://zeuscode-tech.github.io/zeuscode-tech/chess/">',
+        f'    <img width="520" src="{board_url}" alt="Текущая шахматная позиция" />',
+        "  </a>",
         "</p>",
         "",
         f'<p align="center"><strong>{game_status(board)}</strong> · Партия #{state["game_id"]} · Ходов: {revision}</p>',
         "",
+        '<p align="center"><a href="https://zeuscode-tech.github.io/zeuscode-tech/chess/"><strong>Нажмите на доску и сделайте ход →</strong></a></p>',
+        "",
+        "_В интерактивной доске: первый клик выбирает фигуру, второй — клетку назначения._",
+        "",
     ]
-
-    if board.is_game_over():
-        new_title = f'chess|new||{revision}'
-        lines.append(
-            f'### [Начать новую партию]({issue_url(repository, new_title)})'
-        )
-    else:
-        lines.extend(
-            [
-                "Выберите ход — откроется Issue с уже заполненной командой:",
-                "",
-                legal_moves_table(board, repository, revision),
-            ]
-        )
-
     lines.extend(["", "<details>", "<summary>Последние ходы</summary>", "", history_table(state), "", "</details>", END_MARKER])
     block = "\n".join(lines)
 

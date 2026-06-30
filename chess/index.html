@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Шахматы с Исхаком</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <p class="eyebrow">ZEUSCODE · COMMUNITY CHESS</p>
+        <h1>Сделай следующий ход</h1>
+        <p class="lead">Нажми на фигуру, затем на подсвеченную клетку.</p>
+      </header>
+
+      <section class="game" aria-labelledby="game-status">
+        <div class="meta">
+          <div>
+            <span id="game-number">Партия</span>
+            <strong id="game-status">Загрузка позиции…</strong>
+          </div>
+          <a href="https://github.com/zeuscode-tech/zeuscode-tech" class="profile-link">← Вернуться в профиль</a>
+        </div>
+
+        <div id="board" class="board" role="grid" aria-label="Интерактивная шахматная доска"></div>
+        <p id="hint" class="hint" aria-live="polite">Загружаю актуальную позицию…</p>
+        <button id="new-game" class="new-game" type="button" hidden>Начать новую партию</button>
+      </section>
+
+      <p class="footnote">После выбора хода откроется GitHub Issue. Просто нажми <strong>Create new issue</strong> — проверка и обновление доски выполнятся автоматически.</p>
+    </main>
+
+    <dialog id="promotion-dialog">
+      <form method="dialog">
+        <h2>Выбери фигуру</h2>
+        <div id="promotion-options" class="promotion-options"></div>
+        <button class="cancel" value="cancel">Отмена</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

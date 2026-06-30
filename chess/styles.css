@@ -1,0 +1,99 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e8eefc;
+  background: #070b17;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(54, 188, 247, 0.16), transparent 34rem),
+    radial-gradient(circle at 85% 85%, rgba(37, 99, 235, 0.2), transparent 30rem),
+    #070b17;
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.shell {
+  width: min(94vw, 760px);
+  margin: 0 auto;
+  padding: 48px 0 36px;
+}
+
+header { margin-bottom: 24px; }
+.eyebrow { margin: 0 0 8px; color: #36bcf7; font: 700 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; }
+h1 { margin: 0; font-size: clamp(32px, 7vw, 54px); line-height: 1.02; letter-spacing: -.045em; }
+.lead { margin: 12px 0 0; color: #9aa9c7; font-size: 17px; }
+
+.game {
+  padding: clamp(14px, 3vw, 24px);
+  border: 1px solid rgba(148, 163, 184, .18);
+  border-radius: 24px;
+  background: rgba(10, 16, 33, .82);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .38);
+  backdrop-filter: blur(16px);
+}
+
+.meta { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+.meta span { display: block; margin-bottom: 4px; color: #7181a3; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
+.meta strong { font-size: 18px; }
+.profile-link { color: #9ccff7; font-size: 14px; text-decoration: none; }
+.profile-link:hover { text-decoration: underline; }
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 14px;
+  box-shadow: 0 12px 38px rgba(0, 0, 0, .32);
+}
+
+.square {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  color: #07101f;
+  font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", sans-serif;
+  font-size: clamp(28px, 9vw, 64px);
+  line-height: 1;
+  cursor: default;
+}
+
+.square.light { background: #dbeafe; }
+.square.dark { background: #2563eb; }
+.square.last::after { content: ""; position: absolute; inset: 0; background: rgba(245, 158, 11, .38); pointer-events: none; }
+.square.movable { cursor: pointer; }
+.square.movable::before { content: ""; position: absolute; inset: 9%; border: 3px solid rgba(54, 188, 247, .7); border-radius: 12px; }
+.square.selected { background: #38bdf8; }
+.square.target { cursor: pointer; }
+.square.target::before { content: ""; position: absolute; width: 25%; aspect-ratio: 1; border-radius: 50%; background: rgba(6, 18, 38, .5); z-index: 2; }
+.square.target.has-piece::before { width: 78%; border: 5px solid rgba(6, 18, 38, .58); background: transparent; }
+.square span { position: relative; z-index: 1; filter: drop-shadow(0 2px 1px rgba(255, 255, 255, .22)); }
+
+.hint { min-height: 24px; margin: 16px 0 0; color: #b7c4dd; text-align: center; }
+.new-game { display: block; margin: 16px auto 0; padding: 11px 18px; border: 0; border-radius: 10px; color: #06111d; background: #36bcf7; font-weight: 800; cursor: pointer; }
+.new-game[hidden] { display: none; }
+.footnote { max-width: 650px; margin: 18px auto 0; color: #7181a3; font-size: 13px; line-height: 1.6; text-align: center; }
+
+dialog { width: min(90vw, 380px); border: 1px solid #263451; border-radius: 18px; color: #e8eefc; background: #0d1529; box-shadow: 0 30px 100px #000; }
+dialog::backdrop { background: rgba(2, 6, 16, .78); backdrop-filter: blur(4px); }
+dialog h2 { margin: 0 0 18px; text-align: center; }
+.promotion-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.promotion-options button { padding: 10px; border: 1px solid #31415f; border-radius: 10px; color: white; background: #16223a; font-size: 34px; cursor: pointer; }
+.cancel { display: block; margin: 16px auto 0; border: 0; color: #9aa9c7; background: transparent; cursor: pointer; }
+
+@media (max-width: 560px) {
+  .shell { padding-top: 28px; }
+  .meta { align-items: start; flex-direction: column; gap: 8px; }
+  .square.movable::before { inset: 6%; border-width: 2px; border-radius: 7px; }
+}

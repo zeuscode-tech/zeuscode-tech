@@ -63,6 +63,18 @@ class ChessProfileTests(unittest.TestCase):
         self.assertTrue(result.changed)
         self.assertEqual(state["game_id"], 2)
 
+    def test_position_payload_exposes_clickable_legal_moves(self):
+        payload = chess_profile.position_payload(
+            chess_profile.initial_state(), "zeuscode-tech/zeuscode-tech"
+        )
+
+        self.assertEqual(payload["revision"], 0)
+        self.assertEqual(len(payload["legalMoves"]), 20)
+        self.assertIn(
+            {"from": "e2", "to": "e4", "uci": "e2e4", "san": "e4"},
+            payload["legalMoves"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

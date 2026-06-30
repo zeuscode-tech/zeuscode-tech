@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "repository": "zeuscode-tech/zeuscode-tech",
+  "gameId": 1,
+  "revision": 0,
+  "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "turn": "white",
+  "status": "Ход белых",
+  "gameOver": false,
+  "lastMove": null,
+  "pieces": {
+    "h8": "r",
+    "g8": "n",
+    "f8": "b",
+    "e8": "k",
+    "d8": "q",
+    "c8": "b",
+    "b8": "n",
+    "a8": "r",
+    "h7": "p",
+    "g7": "p",
+    "f7": "p",
+    "e7": "p",
+    "d7": "p",
+    "c7": "p",
+    "b7": "p",
+    "a7": "p",
+    "h2": "P",
+    "g2": "P",
+    "f2": "P",
+    "e2": "P",
+    "d2": "P",
+    "c2": "P",
+    "b2": "P",
+    "a2": "P",
+    "h1": "R",
+    "g1": "N",
+    "f1": "B",
+    "e1": "K",
+    "d1": "Q",
+    "c1": "B",
+    "b1": "N",
+    "a1": "R"
+  },
+  "legalMoves": [
+    {
+      "from": "a2",
+      "to": "a3",
+      "uci": "a2a3",
+      "san": "a3"
+    },
+    {
+      "from": "a2",
+      "to": "a4",
+      "uci": "a2a4",
+      "san": "a4"
+    },
+    {
+      "from": "b1",
+      "to": "a3",
+      "uci": "b1a3",
+      "san": "Na3"
+    },
+    {
+      "from": "b1",
+      "to": "c3",
+      "uci": "b1c3",
+      "san": "Nc3"
+    },
+    {
+      "from": "b2",
+      "to": "b3",
+      "uci": "b2b3",
+      "san": "b3"
+    },
+    {
+      "from": "b2",
+      "to": "b4",
+      "uci": "b2b4",
+      "san": "b4"
+    },
+    {
+      "from": "c2",
+      "to": "c3",
+      "uci": "c2c3",
+      "san": "c3"
+    },
+    {
+      "from": "c2",
+      "to": "c4",
+      "uci": "c2c4",
+      "san": "c4"
+    },
+    {
+      "from": "d2",
+      "to": "d3",
+      "uci": "d2d3",
+      "san": "d3"
+    },
+    {
+      "from": "d2",
+      "to": "d4",
+      "uci": "d2d4",
+      "san": "d4"
+    },
+    {
+      "from": "e2",
+      "to": "e3",
+      "uci": "e2e3",
+      "san": "e3"
+    },
+    {
+      "from": "e2",
+      "to": "e4",
+      "uci": "e2e4",
+      "san": "e4"
+    },
+    {
+      "from": "f2",
+      "to": "f3",
+      "uci": "f2f3",
+      "san": "f3"
+    },
+    {
+      "from": "f2",
+      "to": "f4",
+      "uci": "f2f4",
+      "san": "f4"
+    },
+    {
+      "from": "g1",
+      "to": "f3",
+      "uci": "g1f3",
+      "san": "Nf3"
+    },
+    {
+      "from": "g1",
+      "to": "h3",
+      "uci": "g1h3",
+      "san": "Nh3"
+    },
+    {
+      "from": "g2",
+      "to": "g3",
+      "uci": "g2g3",
+      "san": "g3"
+    },
+    {
+      "from": "g2",
+      "to": "g4",
+      "uci": "g2g4",
+      "san": "g4"
+    },
+    {
+      "from": "h2",
+      "to": "h3",
+      "uci": "h2h3",
+      "san": "h3"
+    },
+    {
+      "from": "h2",
+      "to": "h4",
+      "uci": "h2h4",
+      "san": "h4"
+    }
+  ]
+}

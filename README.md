@@ -39,14 +39,14 @@
 
 <!-- CHESS:START -->
 <p align="center">
-  <a href="https://zeuscode-tech.github.io/zeuscode-tech/chess/">
+  <a href="https://zeuscode-tech.github.io/zeuscode-tech/">
     <img width="520" src="https://raw.githubusercontent.com/zeuscode-tech/zeuscode-tech/main/chess/board.svg?move=0" alt="Текущая шахматная позиция" />
   </a>
 </p>
 
 <p align="center"><strong>Ход белых</strong> · Партия #1 · Ходов: 0</p>
 
-<p align="center"><a href="https://zeuscode-tech.github.io/zeuscode-tech/chess/"><strong>Нажмите на доску и сделайте ход →</strong></a></p>
+<p align="center"><a href="https://zeuscode-tech.github.io/zeuscode-tech/"><strong>Нажмите на доску и сделайте ход →</strong></a></p>
 
 _В интерактивной доске: первый клик выбирает фигуру, второй — клетку назначения._
 

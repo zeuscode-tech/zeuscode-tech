@@ -14,9 +14,9 @@
 
 ### 🚀 Сейчас в фокусе
 
-- Развиваю **IQBattle** — соревновательную интеллектуальную платформу.
-- Строю full-stack продукты на **Python, Next.js и Flutter**.
-- Внедряю agent-driven тестирование, ревью и eval-driven CI/CD.
+- 🚀 Развиваю **IQBattle** — соревновательную интеллектуальную платформу.
+- 💻 Строю full-stack продукты на **Python, Next.js и Flutter**.
+- 🤖 Внедряю agent-driven тестирование, ревью и eval-driven CI/CD.
 
 ---
 
@@ -48,8 +48,12 @@
 ### 📊 Статистика GitHub
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=zeuscode-tech&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;include_all_commits=true&amp;count_private=true" alt="Статистика GitHub Исхака" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeuscode-tech&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true" alt="Основные языки" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=zeuscode-tech&amp;theme=tokyonight" alt="Сводная статистика GitHub Исхака" />
+</p>
+
+<p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=zeuscode-tech&amp;theme=tokyonight" alt="Основные языки по репозиториям" />
+  <img height="165" src="https://streak-stats.demolab.com?user=zeuscode-tech&amp;theme=tokyonight&amp;hide_border=true" alt="Серия активности GitHub" />
 </p>
 
 ---

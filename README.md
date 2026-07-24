@@ -1,12 +1,6 @@
 # ⚡ Привет, я Исхак
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&amp;weight=500&amp;size=22&amp;pause=1000&amp;color=36BCF7&amp;center=true&amp;vCenter=true&amp;width=700&amp;lines=Lead+Developer+at+CoreStack+Solutions;Full-Stack%3A+Python%2C+Next.js%2C+Flutter;Building+IQBattle;Based+in+Bishkek%2C+Kyrgyzstan" alt="Lead Developer, full-stack engineer and IQBattle builder" />
-  </a>
-</p>
-
-<p align="center">
   Создаю продукты на стыке сильного backend, выразительного frontend и AI-автоматизации качества.
 </p>
 
@@ -30,34 +24,6 @@
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&amp;logo=flutter&amp;logoColor=white" alt="Flutter" />
 </p>
-
----
-
-### ♟️ Интерактивные шахматы
-
-Сделай следующий ход: выбери один из легальных вариантов под доской и создай готовый Issue.
-
-<!-- CHESS:START -->
-<p align="center">
-  <a href="https://zeuscode-tech.github.io/zeuscode-tech/">
-    <img width="520" src="https://raw.githubusercontent.com/zeuscode-tech/zeuscode-tech/main/chess/board.svg?move=0" alt="Текущая шахматная позиция" />
-  </a>
-</p>
-
-<p align="center"><strong>Ход белых</strong> · Партия #1 · Ходов: 0</p>
-
-<p align="center"><a href="https://zeuscode-tech.github.io/zeuscode-tech/"><strong>Нажмите на доску и сделайте ход →</strong></a></p>
-
-_В интерактивной доске: первый клик выбирает фигуру, второй — клетку назначения._
-
-
-<details>
-<summary>Последние ходы</summary>
-
-_Партия только началась._
-
-</details>
-<!-- CHESS:END -->
 
 ---
 

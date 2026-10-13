@@ -1,57 +1,27 @@
-# ⚡ Привет, я Исхак
-
-<p align="center">
-  Создаю продукты на стыке сильного backend, выразительного frontend и AI-автоматизации качества.
-</p>
-
----
-
-### 🚀 Сейчас в фокусе
-
-- 🚀 Развиваю **IQBattle** — соревновательную интеллектуальную платформу.
-- 💻 Строю full-stack продукты на **Python, Next.js и Flutter**.
-- 🤖 Внедряю agent-driven тестирование, ревью и eval-driven CI/CD.
-
----
-
-### 🛠️ Технический арсенал
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&amp;logo=django&amp;logoColor=white" alt="Django" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&amp;logo=nextdotjs&amp;logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&amp;logo=flutter&amp;logoColor=white" alt="Flutter" />
-</p>
-
----
-
-### 🐍 Активность
-
-<p align="center">
+<div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zeuscode-tech/zeuscode-tech/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zeuscode-tech/zeuscode-tech/output/github-contribution-grid-snake.svg" />
-    <img alt="Анимация активности GitHub" src="https://raw.githubusercontent.com/zeuscode-tech/zeuscode-tech/output/github-contribution-grid-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/dark/header.svg?v=1">
+    <img src="assets/light/header.svg?v=1" width="100%" alt="Iskhak — Full-stack Developer and AI Automation">
   </picture>
-</p>
+</div>
 
----
+<br>
 
-### 📊 Статистика GitHub
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dark/about.svg?v=1">
+  <img src="assets/light/about.svg?v=1" width="100%" alt="About Iskhak: full-stack developer building IQBattle and AI-powered developer workflows">
+</picture>
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=zeuscode-tech&amp;theme=tokyonight" alt="Сводная статистика GitHub Исхака" />
-</p>
+<br>
 
-<p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=zeuscode-tech&amp;theme=tokyonight" alt="Основные языки по репозиториям" />
-  <img height="165" src="https://streak-stats.demolab.com?user=zeuscode-tech&amp;theme=tokyonight&amp;hide_border=true" alt="Серия активности GitHub" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dark/stack.svg?v=1">
+  <img src="assets/light/stack.svg?v=1" width="100%" alt="Tech stack: Python, Django, FastAPI, Next.js, React, Flutter, Docker, Git and AI agents">
+</picture>
 
----
+<br>
 
-<p align="center">
-  <strong>Из Бишкека — в продукты, которыми пользуются люди.</strong>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dark/footer.svg?v=1">
+  <img src="assets/light/footer.svg?v=1" width="100%" alt="From Bishkek to products people love to use">
+</picture>
